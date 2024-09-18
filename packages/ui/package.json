@@ -1,34 +1,47 @@
 {
-  "name": "@neuronio/ui",
-  "version": "0.0.0",
-  "sideEffects": [
-    "**/*.css"
-  ],
-  "files": [
-    "dist"
-  ],
-  "exports": {
-    "./styles.css": "./dist/index.css",
-    "./card": "./src/card.tsx"
-  },
-  "license": "MIT",
-  "scripts": {
-    "build": "tailwindcss -i ./src/styles.css -o ./dist/index.css",
-    "lint": "eslint src/",
-    "dev": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
-    "type-check": "tsc --noEmit"
-  },
-  "peerDependencies": {
-    "react": "^18.2.0"
-  },
-  "devDependencies": {
-    "@neuronio/eslint-config": "*",
-    "@neuronio/tailwind-config": "*",
-    "@neuronio/typescript-config": "*",
-    "@types/react": "^18.2.61",
-    "autoprefixer": "^10.4.18",
-    "postcss": "^8.4.35",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5.3.3"
-  }
+    "name": "@neuronio/ui",
+    "version": "0.0.0",
+    "sideEffects": [
+        "**/*.css"
+    ],
+    "files": [
+        "dist"
+    ],
+    "imports": {
+        "#*": "./src/*"
+    },
+    "exports": {
+        "./styles.css": "./dist/index.css",
+        "./card": "./src/card.tsx",
+        "./button": "./src/components/ui/button.tsx",
+        "./tailwind.config": "./tailwind.config.ts"
+    },
+    "license": "MIT",
+    "scripts": {
+        "build": "tailwindcss -i ./src/styles.css -o ./dist/index.css",
+        "lint": "eslint src/",
+        "dev": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
+        "type-check": "tsc --noEmit"
+    },
+    "peerDependencies": {
+        "react": "^18.2.0"
+    },
+    "devDependencies": {
+        "@neuronio/eslint-config": "*",
+        "@neuronio/tailwind-config": "*",
+        "@neuronio/typescript-config": "*",
+        "@types/react": "^18.2.61",
+        "autoprefixer": "^10.4.18",
+        "postcss": "^8.4.35",
+        "tailwindcss": "^3.4.1",
+        "typescript": "^5.3.3"
+    },
+    "dependencies": {
+        "@radix-ui/react-slot": "^1.1.0",
+        "class-variance-authority": "^0.7.0",
+        "clsx": "^2.1.1",
+        "lucide-react": "^0.441.0",
+        "tailwind-merge": "^2.5.2",
+        "tailwindcss-animate": "^1.0.7"
+    }
 }
