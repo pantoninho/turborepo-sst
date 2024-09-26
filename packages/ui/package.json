@@ -1,5 +1,5 @@
 {
-    "name": "@neuronio/ui",
+    "name": "@org/ui",
     "version": "0.0.0",
     "sideEffects": [
         "**/*.css"
@@ -28,9 +28,9 @@
         "react": "^18.2.0"
     },
     "devDependencies": {
-        "@neuronio/eslint-config": "*",
-        "@neuronio/tailwind-config": "*",
-        "@neuronio/typescript-config": "*",
+        "@org/eslint-config": "*",
+        "@org/tailwind-config": "*",
+        "@org/typescript-config": "*",
         "@types/react": "^18.2.61",
         "autoprefixer": "^10.4.18",
         "postcss": "^8.4.35",

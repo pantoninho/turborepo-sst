@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ["@neuronio/eslint-config/react.js"],
+    extends: ["@org/eslint-config/react.js"],
 };

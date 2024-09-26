@@ -1,5 +1,5 @@
 {
-    "extends": "@neuronio/typescript-config/react-library.json",
+    "extends": "@org/typescript-config/react-library.json",
     "include": ["."],
     "exclude": ["dist", "build", "node_modules"],
     "compilerOptions": {

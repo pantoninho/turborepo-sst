@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-  reactStrictMode: true,
-  transpilePackages: ["@neuronio/ui"],
+    reactStrictMode: true,
+    transpilePackages: ["@org/ui"],
 };

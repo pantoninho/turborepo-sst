@@ -11,13 +11,13 @@ export default $config({
     async run() {
         new sst.aws.Astro('WebApp', {
             path: 'apps/astro-webapp',
-            buildCommand: 'npx --yes turbo run build --filter=astro-webapp...',
-            dev: { command: 'npx --yes turbo run dev --filter=astro-webapp...' }
+            buildCommand: 'npx --yes turbo run build --filter=@org/webapp...',
+            dev: { command: 'npx --yes turbo run dev --filter=@org/webapp...' }
         });
         new sst.aws.Nextjs('Docs', {
             path: 'apps/docs',
-            buildCommand: 'npx --yes turbo run build --filter=docs^...; npx --yes open-next build',
-            dev: { command: 'npx --yes turbo run dev --filter=docs...' }
+            buildCommand: 'npx --yes turbo run build --filter=@org/docs^...; npx --yes open-next build',
+            dev: { command: 'npx --yes turbo run dev --filter=@org/docs...' }
         });
     },
 });

@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-import sharedConfig from "@neuronio/tailwind-config";
+import sharedConfig from "@org/tailwind-config";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
 const config: Config = {

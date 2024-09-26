@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ["@neuronio/eslint-config/next.js"],
+    extends: ["@org/eslint-config/next.js"],
 };

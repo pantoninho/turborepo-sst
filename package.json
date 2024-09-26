@@ -1,5 +1,14 @@
 {
+    "name": "@org/workspace",
     "private": true,
+    "packageManager": "npm@10.1.0",
+    "engines": {
+        "node": ">=18"
+    },
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
     "scripts": {
         "build": "turbo build",
         "clean": "turbo clean",
@@ -9,22 +18,13 @@
         "lint": "turbo lint",
         "type-check": "turbo type-check"
     },
+    "dependencies": {
+        "sst": "3.1.38"
+    },
     "devDependencies": {
         "@types/aws-lambda": "8.10.145",
         "prettier": "^3.2.5",
         "prettier-plugin-tailwindcss": "^0.5.11",
         "turbo": "^2.1.2"
-    },
-    "engines": {
-        "node": ">=18"
-    },
-    "name": "with-tailwind",
-    "packageManager": "npm@10.1.0",
-    "workspaces": [
-        "apps/*",
-        "packages/*"
-    ],
-    "dependencies": {
-        "sst": "3.1.38"
     }
 }

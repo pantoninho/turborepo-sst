@@ -1,3 +1,3 @@
 module.exports = {
-    extends: ["@neuronio/eslint-config/library"],
+    extends: ["@org/eslint-config/library"],
 };

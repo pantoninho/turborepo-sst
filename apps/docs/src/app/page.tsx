@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Card } from "@neuronio/ui/card";
+import { Card } from "@org/ui/card";
 
 function Gradient({
     conic,

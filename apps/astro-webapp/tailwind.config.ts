@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-import uiConfig from "@neuronio/ui/tailwind.config";
+import uiConfig from "@org/ui/tailwind.config";
 import plugin from 'tailwindcss/plugin'
 
 const config: Config = {
