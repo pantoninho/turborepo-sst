@@ -1,5 +1,6 @@
 {
     "$schema": "https://turbo.build/schema.json",
+    "globalPassThroughEnv": ["SST_RESOURCE_*", "AWS_*", "PROD", "DEV"],
     "tasks": {
         "build": {
             "dependsOn": ["^build"],

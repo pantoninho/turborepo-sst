@@ -5,12 +5,12 @@ import "sst"
 export {}
 declare module "sst" {
   export interface Resource {
-    "Docs": {
-      "type": "sst.aws.Nextjs"
+    "AstroWebapp": {
+      "type": "sst.aws.Astro"
       "url": string
     }
-    "WebApp": {
-      "type": "sst.aws.Astro"
+    "Docs": {
+      "type": "sst.aws.Nextjs"
       "url": string
     }
   }
