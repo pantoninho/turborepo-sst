@@ -1,0 +1,21 @@
+{
+    "name": "@org/dynamo",
+    "version": "0.0.0",
+    "imports": {
+        "#*": "./src/*"
+    },
+    "main": "index.ts",
+    "license": "MIT",
+    "scripts": {
+        "lint": "eslint index.ts"
+    },
+    "devDependencies": {
+        "@org/eslint-config": "*",
+        "@org/typescript-config": "*",
+        "typescript": "^5.6.2"
+    },
+    "dependencies": {
+        "@aws-sdk/client-dynamodb": "^3.664.0",
+        "@aws-sdk/lib-dynamodb": "^3.664.0"
+    }
+}

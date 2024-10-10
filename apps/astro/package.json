@@ -13,6 +13,7 @@
     "dependencies": {
         "@astrojs/react": "^3.6.2",
         "@astrojs/tailwind": "^5.1.1",
+        "@org/dynamo": "*",
         "@org/ui": "*",
         "astro": "^4.15.11",
         "astro-sst": "2.43.5",

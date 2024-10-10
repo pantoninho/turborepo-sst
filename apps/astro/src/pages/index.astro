@@ -1,19 +1,20 @@
 ---
+import Counter from "@/components/counter.astro";
 import Layout from "@/layouts/layout.astro";
 import AnimatedGradientBackground from "@org/ui/animated-gradient-bg";
 import { HeartHandshakeIcon } from "lucide-react";
 ---
 
 <Layout title="Welcome to Astro.">
-    <main class="min-h-dvh min-w-vw">
+    <main class="min-h-dvh min-w-full">
         <AnimatedGradientBackground client:load>
             <div
-                class="font-mono text-6xl absolute flex w-full h-full justify-center items-center z-10"
+                class="absolute z-10 flex size-full items-center justify-center font-mono text-6xl"
             >
                 <div class="flex flex-col items-center gap-4">
-                    <h1>TURBOREPO</h1>
+                    <Counter name="TURBOREPO" />
                     <HeartHandshakeIcon className="size-16 animate-pulse" />
-                    <h1>SST</h1>
+                    <Counter name="SST" />
                 </div>
             </div>
         </AnimatedGradientBackground>

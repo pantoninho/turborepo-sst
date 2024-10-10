@@ -9,6 +9,10 @@ declare module "sst" {
       "type": "sst.aws.Astro"
       "url": string
     }
+    "Counters": {
+      "name": string
+      "type": "sst.aws.Dynamo"
+    }
     "Docs": {
       "type": "sst.aws.Nextjs"
       "url": string

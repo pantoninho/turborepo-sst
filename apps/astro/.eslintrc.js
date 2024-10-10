@@ -1,3 +1,3 @@
 module.exports = {
-    extends: ["@neuronio/eslint-config/astro"],
+    extends: ["@org/eslint-config/astro"],
 };

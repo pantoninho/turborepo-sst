@@ -9,10 +9,15 @@ export default $config({
         };
     },
     async run() {
+        const counters = new sst.aws.Dynamo("Counters", {
+            primaryIndex: { hashKey: "name" },
+            fields: { name: "string" },
+        });
         new sst.aws.Astro('AstroWebapp', {
             path: 'apps/astro',
             buildCommand: 'npx --yes turbo run build --filter=@org/astro...',
-            dev: { command: 'npx --yes turbo run dev --filter=@org/astro...' }
+            dev: { command: 'npx --yes turbo run dev --filter=@org/astro...' },
+            link: [counters]
         });
         new sst.aws.Nextjs('Docs', {
             path: 'apps/docs',

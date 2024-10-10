@@ -1,0 +1,64 @@
+---
+import { Button } from "@org/ui/button";
+import { PlusIcon } from "lucide-react";
+
+interface Props {
+    name: string;
+}
+
+const { name } = Astro.props;
+---
+
+<Button
+    data-counter-button
+    data-counter-name={name}
+    variant="ghost"
+    className="group flex h-auto translate-x-8 items-center p-2 outline-1 hover:bg-transparent hover:outline"
+>
+    <h1 class="text-6xl">{name}</h1>
+    <div
+        class="-translate-x-full px-4 opacity-0 transition-all ease-in group-hover:translate-x-0 group-hover:opacity-100"
+    >
+        <h2 data-counter-value class="hidden animate-in slide-in-from-bottom">
+        </h2>
+        <PlusIcon className="size-6" />
+    </div>
+</Button>
+
+<script>
+    import { actions } from "astro:actions";
+
+    const buttons = document.querySelectorAll("[data-counter-button]");
+
+    buttons.forEach((button) => {
+        if (!(button instanceof HTMLButtonElement)) {
+            return;
+        }
+
+        const { counterName } = button.dataset;
+
+        if (!counterName) {
+            return;
+        }
+
+        button.addEventListener("click", async () => {
+            const { data, error } = await actions.increment({
+                name: counterName,
+            });
+
+            const valueElement = button.querySelector("[data-counter-value]");
+
+            if (error) {
+                console.log(error);
+                return;
+            }
+
+            if (data?.value == undefined || !valueElement) {
+                return;
+            }
+
+            valueElement.textContent = String(data.value);
+            valueElement.classList.remove("hidden");
+        });
+    });
+</script>
